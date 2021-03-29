@@ -8,7 +8,8 @@ console.log('Is 2 gelijk aan 2?', equalNumbers);
 // ==========================================
 // 1. Declareer een variabele en sla daar de uitkomst van de vergelijking "Is 10 groter dan 20?" in op        // geeft false wanneer gelogd
 // ==========================================
-
+const compareNumbers = 10 < 20;
+console.log('is 10 groter dan 20?', compareNumbers)
 
 // ==========================================
 // 2. Declareer een variabele en sla daar de uitkomst van de vergelijking "Is 10 ongelijk aan 11?" in op        // geeft true wanneer gelogd
