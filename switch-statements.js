@@ -2,7 +2,7 @@
 // Opdracht 1: schrijf een switch statement die op basis van de volgende variabele een bijbehorende foutmelding in de console logt.
 // ==========================================
 
-const errorCode = 0;
+const errorCode = 6;
 
 // Je mag ervanuit gaan dat deze variabele altijd een waarde tussen de 0 en de 4 bevat. Deze codes hebben de volgende betekenissen (foutmeldingen):
 // 0: "Geen watertoevoer"
@@ -15,6 +15,25 @@ const errorCode = 0;
 // const errorCode = 0 geeft "Geen watertoevoer" in de terminal
 // const errorCode = 4 geeft "Geen druk" in de terminal
 // etc.
+switch (errorCode) {
+    case 0:
+        console.log('Geen watertoevoer');
+        break;
+    case 1:
+        console.log('Temperatuur te laag');
+        break;
+    case 2:
+        console.log('Koffiebonen op');
+        break;
+    case 3:
+        console.log('Afvalbak vol');
+        break;
+    case 4:
+        console.log('Geen druk');
+        break;
+    default:
+        console.log('geen geldige foutmelding')
+}
 
 
 // ==========================================
@@ -35,8 +54,33 @@ const monitorColor = "red";
 // const monitorColor = "red" geeft "Kritieke hartslag, actie vereist!" in de terminal
 // const monitorColor = "green" geeft "Hartslag stabiel" in de terminal
 // etc.
+switch (monitorColor) {
+    case 'green':
+        console.log('Hartslag stabiel');
+        break;
+    case 'yellow':
+        console.log('Hartslag verhoogd');
+        break;
+    case 'orange':
+    case 'red':
+        console.log('Kritieke hartslag');
+        break;
+    default:
+        console.log('Status hartslag onbekend');
+}
 
 
 // ==========================================
 // [BONUSOPDRACHT] - optioneel: kun je de switch-statement uit opdracht 2 ook opschrijven met een aantal if-statements?
 // ==========================================
+if (monitorColor === 'green') {
+    console.log('Hartslag stabiel');
+}
+if (monitorColor === 'yellow') {
+    console.log('Hartslag verhoogd');
+}
+if (monitorColor === 'orange' || monitorColor === 'red') {
+    console.log('Kritieke hartslag');
+} else {
+    console.log('Kritieke hartslag');
+}
